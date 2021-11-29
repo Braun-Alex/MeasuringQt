@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Measuring_Interface</class>
+ <widget class="QMainWindow" name="Measuring_Interface">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Measuring application</string>
+  </property>
+  <widget class="QWidget" name="Window">
+   <widget class="QPushButton" name="Generate">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>90</y>
+      <width>301</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Згенерувати дані</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Save">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>150</y>
+      <width>411</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Обрати директорію для збереження даних</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Status">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>20</y>
+      <width>741</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Статус: нічого не згенеровано...</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Count">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>330</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>100000</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Iterations">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>380</y>
+      <width>231</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Кількість ітерацій циклу</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="Choice">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>260</y>
+      <width>161</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="currentText">
+     <string>Мілісекунди</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Мілісекунди</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Мікросекунди</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Наносекунди</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Generate</sender>
+   <signal>released()</signal>
+   <receiver>Measuring_Interface</receiver>
+   <slot>Generate()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>350</x>
+     <y>110</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Save</sender>
+   <signal>released()</signal>
+   <receiver>Measuring_Interface</receiver>
+   <slot>Save()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>395</x>
+     <y>170</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Count</sender>
+   <signal>returnPressed()</signal>
+   <receiver>Measuring_Interface</receiver>
+   <slot>Check()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>645</x>
+     <y>345</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>Generate()</slot>
+  <slot>Save()</slot>
+  <slot>Check()</slot>
+ </slots>
+</ui>
